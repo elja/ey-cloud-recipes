@@ -9,7 +9,7 @@ end
 
 execute "emerge --unmerge imagemagick" do
   command "emerge --unmerge imagemagick"
-  user sudo
+  user "sudo"
 end
 
 
