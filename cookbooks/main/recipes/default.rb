@@ -6,7 +6,8 @@
 
 
 #require_recipe 'imagemagick_installer'
-require_recipe 'juggernaut_starter'
+#require_recipe 'juggernaut_starter'
+require_recipe 'nginx_websocket_conf'
 # uncomment to turn on thinking sphinx/ultra sphinx. Remember to edit cookbooks/sphinx/recipes/default.rb first!
 # require_recipe "sphinx"
 
