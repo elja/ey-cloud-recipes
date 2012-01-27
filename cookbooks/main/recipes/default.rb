@@ -5,8 +5,8 @@
 #end
 
 
-require_recipe 'imagemagick_installer'
-
+#require_recipe 'imagemagick_installer'
+require_recipe 'juggernaut_starter'
 # uncomment to turn on thinking sphinx/ultra sphinx. Remember to edit cookbooks/sphinx/recipes/default.rb first!
 # require_recipe "sphinx"
 
