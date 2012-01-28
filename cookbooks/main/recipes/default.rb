@@ -29,8 +29,8 @@ require_recipe 'haproxy_starter'
 #require_recipe "ssmtp"
 
 #uncomment to run the sunspot recipe
-require_recipe "sunspot"
-require_recipe "delayed_job"
+#require_recipe "sunspot"
+#require_recipe "delayed_job"
 #uncomment to run the exim recipe
 #exim_auth "auth" do
 #  my_hostname "my_hostname.com"
