@@ -24,14 +24,20 @@ execute "npm install -g juggernaut" do
    command "npm install -g juggernaut"
 end  
 
-ey_cloud_report "installing juggernaut npm" do
-  message "installing juggernaut npm"
+ey_cloud_report "installing juggernaut gem" do
+  message "installing juggernaut gem"
 end
 
 execute "gem install juggernaute" do
   command "gem install juggernaut"
 end 
 
-execute "gem install juggernaute" do
+
+ey_cloud_report "starting juggernaut" do
+  message "starting juggernaut"
+end
+
+
+execute "juggernaut start" do
   command "juggernaut --port 8000"
 end
