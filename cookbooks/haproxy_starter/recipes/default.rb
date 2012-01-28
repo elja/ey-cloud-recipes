@@ -11,6 +11,6 @@ end
 
 
 execute "haproxy start" do
-  command "#{haproxy_path}/haproxy -f #{haproxy_cfg_path}"
+  command "#{haproxy_path}/haproxy -f #{haproxy_cfg_path} -p /var/tmp/haproxy.pid -sf `cat /var/tmp/haproxy.pid"
 end
 

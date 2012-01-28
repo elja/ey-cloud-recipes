@@ -1,0 +1,2 @@
+   [36minfo  -[39m socket.io started
+   [33mwarn  -[39m error raised: Error: listen EADDRINUSE
