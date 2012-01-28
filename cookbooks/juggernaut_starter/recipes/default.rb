@@ -39,5 +39,5 @@ end
 
 
 execute "juggernaut start" do
-  command "juggernaut --port 8000"
+  command "juggernaut --port 8000 > /dev/null &"
 end
