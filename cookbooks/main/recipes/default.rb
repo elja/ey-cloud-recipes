@@ -5,7 +5,7 @@
 #end
 
 
-#require_recipe 'imagemagick_installer'
+require_recipe 'imagemagick_installer'
 require_recipe 'redis'
 require_recipe 'juggernaut_starter'
 require_recipe 'nginx_websocket_conf'
@@ -29,8 +29,8 @@ require_recipe 'haproxy_starter'
 #require_recipe "ssmtp"
 
 #uncomment to run the sunspot recipe
-# require_recipe "sunspot"
-
+require_recipe "sunspot"
+require_recipe "delayed_job"
 #uncomment to run the exim recipe
 #exim_auth "auth" do
 #  my_hostname "my_hostname.com"
