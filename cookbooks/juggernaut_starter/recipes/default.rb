@@ -30,4 +30,8 @@ end
 
 execute "gem install juggernaute" do
   command "gem install juggernaut"
-end  
+end 
+
+execute "gem install juggernaute" do
+  command "juggernaut --port 8000"
+end
