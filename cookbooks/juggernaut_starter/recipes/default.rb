@@ -39,5 +39,5 @@ end
 
 
 execute "juggernaut start" do
-  command "nohup juggernaut --port 8000 > jugger.out 2> jugger.err < /dev/null &"
+  command "killall node && nohup juggernaut --port 8000 > jugger.out 2> jugger.err < /dev/null &"
 end
