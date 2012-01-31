@@ -11,6 +11,11 @@ ey_cloud_report "create sym links" do
   message "create sym links"
 end
 
+execute "bundler install" do
+  command "gem install bundler"
+end
+
+
 execute "create sym links for uploads" do
   command "ln -nfs #{app_dir_shared}/uploads #{app_dir_current}/public/"
 end
