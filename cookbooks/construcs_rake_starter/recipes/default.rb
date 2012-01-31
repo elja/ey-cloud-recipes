@@ -30,7 +30,7 @@ ey_cloud_report "starting sunspot" do
 end
 
 execute "sunspot start" do
-  command "cd #{app_dir_current} && RAILS_ENV=#{env} rake sunspot:solr:start"
+  command "cd #{app_dir_current} && RAILS_ENV=#{env} bundle exec rake sunspot:solr:start"
 end
 
 ey_cloud_report "starting delayed jobs" do
@@ -47,5 +47,5 @@ ey_cloud_report "sunspot reindex" do
 end
 
 execute "sunspot reindex" do
-  command "cd #{app_dir_current} && RAILS_ENV=#{env} rake sunspot:reindex"
+  command "cd #{app_dir_current} && RAILS_ENV=#{env} bundle exec rake sunspot:reindex"
 end
