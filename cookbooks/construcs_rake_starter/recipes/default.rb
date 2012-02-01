@@ -27,10 +27,6 @@ ey_cloud_report "starting sunspot" do
   message "starting sunspot"
 end
 
-execute "sunspot stop" do
-  command "cd #{app_dir_current} && RAILS_ENV=#{env} bundle exec rake sunspot:solr:stop"
-end
-
 execute "sunspot start" do
   command "cd #{app_dir_current} && RAILS_ENV=#{env} bundle exec rake sunspot:solr:start"
 end
