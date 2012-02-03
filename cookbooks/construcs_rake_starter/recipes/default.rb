@@ -35,10 +35,6 @@ ey_cloud_report "starting delayed jobs" do
   message "starting delayed jobs"
 end
 
-execute "delayed job stop" do
-  command "cd #{app_dir_current} && RAILS_ENV=#{env} ./script/delayed_job stop"
-end
-
 execute "delayed job start" do
   command "cd #{app_dir_current} && RAILS_ENV=#{env} ./script/delayed_job start"
 end
