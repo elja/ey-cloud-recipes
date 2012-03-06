@@ -3,9 +3,9 @@
 # Recipe:: default
 #
 app_name="Construcs"
-server_name="construcs.com"
+server_name="beta.construcs.com"
 server_port="8090"
-env = "staging"
+env = "beta"
 juggernaut_port="8000"
 
 template "/etc/nginx/servers/#{app_name}.conf" do

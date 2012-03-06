@@ -5,7 +5,7 @@
 app_dir="/data/Construcs/"
 app_dir_shared=app_dir + "shared"
 app_dir_current=app_dir + "current"
-env="staging"
+env="beta"
 
 ey_cloud_report "create sym links" do
   message "create sym links"
@@ -45,4 +45,21 @@ end
 
 execute "sunspot reindex" do
   command "cd #{app_dir_current} && RAILS_ENV=#{env} bundle exec rake sunspot:reindex"
+end
+
+
+ey_cloud_report "precompile assets" do
+  message "precompile assets"
+end
+
+execute "assets precompile" do
+  command "cd #{app_dir_current} && RAILS_ENV=#{env} bundle exec rake assets:precompile"
+end
+
+ey_cloud_report "migrate" do
+  message "migrate"
+end
+
+execute "assets precompile" do
+  command "cd #{app_dir_current} && RAILS_ENV=#{env} bundle exec rake db:migrate"
 end
