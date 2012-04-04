@@ -16,9 +16,18 @@ ruby_block "open port 8080" do
     security_group = connection.security_groups.all(:description => env_name).first
     
     # authorize port if not already authorized
+<<<<<<< HEAD
     unless security_group.ip_permissions.any?{ |p| p['fromPort'] == 7002 && p['toPort'] == 7002 }
-	security_group.authorize_port_range(7002..7002)
+      security_group.authorize_port_range(7002..7002)
     end
   end
   action :create
 end
+=======
+    unless security_group.ip_permissions.any?{|p| p['fromPort'] == 8080 && p['toPort'] == 8080}
+      security_group.authorize_port_range(8080..8080)
+    end
+  end
+  action :create
+end
+>>>>>>> 28ebaa45091390eae0b61d16df857d6098d34fcd

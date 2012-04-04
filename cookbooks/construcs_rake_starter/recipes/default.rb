@@ -5,7 +5,7 @@
 app_dir="/data/Construcs/"
 app_dir_shared=app_dir + "shared"
 app_dir_current=app_dir + "current"
-env="staging"
+env="beta"
 
 ey_cloud_report "create sym links" do
   message "create sym links"
