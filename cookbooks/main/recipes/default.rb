@@ -5,12 +5,12 @@
 #end
 
 
-#require_recipe 'imagemagick_installer'
-#require_recipe 'redis'
-#require_recipe 'juggernaut_starter'
-#require_recipe 'nginx_websocket_conf'
+require_recipe 'imagemagick_installer'
+require_recipe 'redis'
+require_recipe 'juggernaut_starter'
+require_recipe 'nginx_websocket_conf'
 #require_recipe 'haproxy_starter'
-#require_recipe 'construcs_rake_starter'
+require_recipe 'construcs_rake_starter'
 require_recipe 'ports'
 
 

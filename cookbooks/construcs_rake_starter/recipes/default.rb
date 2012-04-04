@@ -5,7 +5,11 @@
 app_dir="/data/Construcs/"
 app_dir_shared=app_dir + "shared"
 app_dir_current=app_dir + "current"
-env="beta"
+
+shared_path = add_dir_shared
+current_path = app_dir_current
+
+env="staging"
 
 ey_cloud_report "create sym links" do
   message "create sym links"
@@ -16,11 +20,13 @@ execute "bundler install" do
 end
 
 execute "create sym links for uploads" do
-  command "ln -nfs #{app_dir_shared}/uploads #{app_dir_current}/public/uploads"
-end
-
-execute "create sym links for sunspot" do
-  command "ln -nfs #{app_dir_shared}/solr #{app_dir_current}/solr"
+  command "ln -nfs #{shared_path}/uploads   #{current_ath}/public/"
+  command "ln -nfs #{shared_path}/solr/data #{current_path}/solr/"
+  command "ln -nfs #{shared_path}/solr/lib  #{current_path}/solr/"
+  command "ln -nfs #{shared_path}/solr/pids #{current_path}/solr/"
+  command "ln -nfs #{shared_path}/solr/conf/elevate.xml #{current_path}/solr/conf/"
+  command "ln -nfs #{shared_path}/solr/conf/solrconfig.xml #{current_path}/solr/conf/"
+  command "ln -nfs #{shared_path}/solr/conf/*.txt #{current_path}/solr/conf/"
 end
 
 ey_cloud_report "starting sunspot" do
