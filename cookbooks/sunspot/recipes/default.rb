@@ -4,7 +4,7 @@
 #
  
 require 'digest/sha1'
-SOLR_VERSION = '1.4.1'
+SOLR_VERSION = '3.6.0'
  
 node[:applications].each do |app,data|
  
@@ -57,7 +57,7 @@ node[:applications].each do |app,data|
   end
  
   gem_package "sunspot_rails" do
-    source "http://gemcutter.org"
+    #source "http://gemcutter.org"
     action :install
     ignore_failure true
   end
@@ -68,12 +68,12 @@ node[:applications].each do |app,data|
     action :install
   end
  
-  execute "install-sunspot-solr" do
-    user node[:owner_name]
-    group node[:owner_name]
-    command "sunspot-installer -f /data/#{app}/jettyapps/solr/solr"
-    action :run
-  end
+  #execute "install-sunspot-solr" do
+  #  user node[:owner_name]
+  #  group node[:owner_name]
+  #  command "sunspot-installer -f /data/#{app}/jettyapps/solr/solr"
+  #  action :run
+  #end
   
   execute "restart-monit-solr" do
     command "/usr/bin/monit reload && " +

@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 
-if ['util'].include?(node[:instance_role])
+if ['util', 'solo','app_master'].include?(node[:instance_role])
   if node[:name] == 'redis'
 
     sysctl "Enable Overcommit Memory" do

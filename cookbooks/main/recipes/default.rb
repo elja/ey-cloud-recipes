@@ -7,12 +7,9 @@
 
 require_recipe 'imagemagick_installer'
 require_recipe 'redis'
-require_recipe 'juggernaut_starter'
-require_recipe 'nginx_websocket_conf'
-#require_recipe 'haproxy_starter'
-require_recipe 'construcs_rake_starter'
+require_recipe 'juggernaut'
+#require_recipe 'nginx_websocket_conf'
 require_recipe 'ports'
-
 
 #uncomment to turn on thinking sphinx/ultra sphinx. Remember to edit cookbooks/sphinx/recipes/default.rb first!
 # require_recipe "sphinx"
@@ -30,11 +27,11 @@ require_recipe 'ports'
 #require_recipe "eybackup_slave"
 
 #uncomment to run the ssmtp recipe
-#require_recipe "ssmtp"
+require_recipe "ssmtp"
 
 #uncomment to run the sunspot recipe
-#require_recipe "sunspot"
-#require_recipe "delayed_job"
+require_recipe "sunspot"
+require_recipe "delayed_job"
 #uncomment to run the exim recipe
 #exim_auth "auth" do
 #  my_hostname "my_hostname.com"
@@ -51,8 +48,6 @@ require_recipe 'ports'
 #require_recipe "resque"
 
 #uncomment to run the redis recipe
-#  require_recipe "redis"
-
 #require_recipe "logrotate"
 #
 #uncomment to use the solr recipe
