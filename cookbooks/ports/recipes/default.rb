@@ -1,4 +1,4 @@
-ruby_block "open port 8080" do
+ruby_block "open port 7002" do
   block do
     # fog
     require 'fog'

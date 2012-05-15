@@ -8,30 +8,12 @@
 require_recipe 'imagemagick_installer'
 require_recipe 'redis'
 require_recipe 'juggernaut'
-#require_recipe 'nginx_websocket_conf'
 require_recipe 'ports'
-
-#uncomment to turn on thinking sphinx/ultra sphinx. Remember to edit cookbooks/sphinx/recipes/default.rb first!
-# require_recipe "sphinx"
-
-#uncomment to turn on memcached
-# require_recipe "memcached"
-
-#uncomment ot run the riak recipe
-# require_recipe "riak"
-
-#uncomment to run the authorized_keys recipe
-#require_recipe "authorized_keys"
-
-#uncomment to run the eybackup_slave recipe
-#require_recipe "eybackup_slave"
-
-#uncomment to run the ssmtp recipe
 require_recipe "ssmtp"
 
 #uncomment to run the sunspot recipe
-require_recipe "sunspot"
-require_recipe "delayed_job"
+#require_recipe "sunspot"
+#require_recipe "delayed_job"
 #uncomment to run the exim recipe
 #exim_auth "auth" do
 #  my_hostname "my_hostname.com"
